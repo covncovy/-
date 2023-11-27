@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新消息</title>
+    <link rel="shortcut icon" href="img/icon.ico">
+    <meta name="description" content="個人專題作品">
+    <link rel="stylesheet" href="news.css">
+    <script src="https://kit.fontawesome.com/bf8e04378b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima&family=Jacques+Francois+Shadow&family=Mrs+Sheppards&family=Noto+Sans+TC&family=Noto+Serif+JP:wght@500;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                <img src="img/logo2.png" alt="logo"></a>
+            </div>
+            <div class="mobile-main">
+                <div class="bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="mobile-nav">
+                <div class="search">
+                    <form>
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="search">
+                        
+                    </form>
+
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="store.html">店鋪情報</a></li>
+                        <li><a href="products.html">品項介紹</a></li>
+                        <li><a href="reservation.html">預定快取</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+        </div>
+            
+            <div class="main">
+                
+                <div class="search">
+                    <form>
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="search">
+                        
+                    </form>
+
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="store.html">店鋪情報</a></li>
+                        <li><a href="products.html">品項介紹</a></li>
+                        <li><a href="reservation.html">預定快取</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="banner">
+            <h2>最新消息</h2>
+            <div class="pic">
+            <img src="img/news.jpg" alt="最新消息">
+        </div>
+        </div>
+        <div class="news">
+            <div class="btn">
+            <button onclick="toggleContent('content1')" data-target="content1">全店活動</button>
+            <button onclick="toggleContent('content2')" data-target="content2">單店活動</button>
+            <button onclick="toggleContent('content3')" data-target="content3">重要公告</button>
+        </div>
+        <div  id="content1" class="article">
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「黑色聖誕限定饗宴」：獨家節慶咖啡與甜點，讓您的聖誕更加璀璨。</h3></a> 
+            </div>
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「新春咖啡福袋」：滿滿的新年祝福，帶回家的咖啡福袋，享受新一年的美好。</h3></a> 
+            </div>
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「夏日清涼特調」：搭配清新的夏日風味，打造專屬於炎熱夏季的涼爽活力。</h3></a> 
+            </div>
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「感恩節濃情感謝」：感恩季節，特調感恩咖啡與節慶感謝甜點，溫暖您的心靈。</h3></a> 
+            </div>
+        </div>
+        <div id="content2" class="article">
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「獨家咖啡課程」：由我們專業咖啡師親授，打造你的咖啡大師之路。</h3></a> 
+            </div>
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「季節新品登場」：品嚐獨家季節限定咖啡，感受風味的季節變奏</h3></a> 
+            </div>
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「會員限定優惠」：快來加入我們的會員計畫，享有獨家優惠與驚喜。</h3></a> 
+            </div>
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「歡樂下午茶時光」：特製下午茶套餐，與摯愛共度輕鬆愉快的下午。</h3></a> 
+            </div>
+        </div>
+        <div id="content3" class="article">
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「重要通知：店內裝修進行中」：為提升用餐環境，我們進行店內裝修工程，敬請期待新面貌。</h3></a> 
+            </div>
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「重要告示：營業時間調整」：為了服務更多顧客，我們將調整營業時間，請留意最新營業時間。</h3></a> 
+            </div>
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「重要通告：節慶休息安排」：為了慶祝特殊節慶，我們將進行休息，敬請提前預訂或留意營業時間調整。</h3></a> 
+            </div>
+            <div class="box">
+                <p>2023.10.16</p>
+                <a href="#"><h3>「公告：Kuro Cafe加盟計畫」：現正招募加盟商，一同打造更多美好的Kuro Cafe分店，歡迎洽詢合作事宜。</h3></a> 
+            </div>
+        </div>
+        
+        </div>
+        <div class="more"><button><a href="#">more<i class="fa-solid fa-angle-right"></i></a></button></div>
+    
+    
+    <div class="footer">
+        <div class="footer-box">
+        <div class="logo"><img src="img/logo.png" alt="logo"></div>
+        <div class="blank">
+            <nav>
+                <ul>
+                    <li><a href="about.html">品牌故事</a></li>
+                    <li><a href="news.html">活動訊息</a></li>
+                    <li><a href="products.html">特色咖啡</a></li>
+                    <li><a href="reservation.html">預定快取</a></li>
+                    <li><a href="store.html">門市查詢</a></li>
+                    <li><a href="contact.html">聯絡我們</a></li>
+                    <li><a href="#">人才招募</a></li>
+                    <li><a href="#">隱私權政策</a></li>
+                </ul>
+            </nav>
+            <p>營業時間<br>
+                11:00~20:00
+
+            </p>
+            <span>本網站為緯育TibaMe前端工程師班第88期學員專題作品，本平台僅供學習、展示之用。</span>
+
+        </div>
+    </div>
+</div>
+</div>
+    <div class="top"><i class="fa-regular fa-circle-up"></i></div>
+</div>
+    <script>
+     $(document).ready(function () {
+     $(".top").click(function (e) {
+    e.preventDefault();
+    $("html,body").animate({ scrollTop: 0 }, 500);
+    });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    var toggleNavButton = document.querySelector(".bar");
+    var navList = document.querySelector(".mobile-nav");
+
+    toggleNavButton.addEventListener("click", function () {
+    navList.style.display = navList.style.display === "none" ? "block" : "none";
+    });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    // 初始顯示全店活動內容
+    toggleContent('content1');
+});
+
+
+    function toggleContent(contentId) {
+    // 隐藏所有内容
+    var contents = document.querySelectorAll('.article');
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = 'none';
+    }
+
+    // 移除所有按钮的激活状态
+    var buttons = document.querySelectorAll('.btn button');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('active');
+    }
+
+    // 显示点击的内容
+    var contentToShow = document.getElementById(contentId);
+    if (contentToShow) {
+        contentToShow.style.display = 'block';
+    }
+
+    // 添加激活状态到被點擊的按鈕
+    var clickedButton = document.querySelector('.btn button[data-target="' + contentId + '"]');
+    if (clickedButton) {
+        clickedButton.classList.add('active');
+    }
+    }
+    
+
+
+</script>
+
+    
+</body>
+</html>

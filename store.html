@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店鋪情報</title>
+    <link rel="shortcut icon" href="img/icon.ico">
+    <meta name="description" content="個人專題作品">
+    <link rel="stylesheet" href="store.css">
+    <script src="https://kit.fontawesome.com/bf8e04378b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima&family=Jacques+Francois+Shadow&family=Mrs+Sheppards&family=Noto+Sans+TC&family=Noto+Serif+JP:wght@500;900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                <img src="img/logo2.png" alt="logo"></a>
+            </div>
+            <div class="mobile-main">
+                <div class="bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="mobile-nav">
+                <div class="search">
+                    <form>
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="search">
+                        
+                    </form>
+
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="store.html">店鋪情報</a></li>
+                        <li><a href="products.html">品項介紹</a></li>
+                        <li><a href="reservation.html">預定快取</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+        </div>
+            
+            <div class="main">
+                
+                <div class="search">
+                    <form>
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="search">
+                        
+                    </form>
+
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="store.html">店鋪情報</a></li>
+                        <li><a href="products.html">品項介紹</a></li>
+                        <li><a href="reservation.html">預定快取</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="banner">
+            <h1>所有門市</h1>
+        </div>
+        <div class="select">
+            <button onclick="filterItems('show-all')" data-target="content1"  class="active">
+                全部
+            </button>
+            <button onclick="filterItems('show-part1')" data-target="content2">
+                北部
+            </button>
+            <button onclick="filterItems('show-part2')" data-target="content3">
+                中部
+            </button>
+            <button onclick="filterItems('show-part3')" data-target="content4">
+                南部
+            </button>
+        </div>
+
+        <div class="store">
+            <div class="card">
+                <div id="part1" class="filter-item part1">
+                <img src="img/shop1.jpg" alt="忠孝敦化店">
+                <div class="text">
+                    <div class="title">
+                    <h2>忠孝敦化店</h2>
+                    <span onclick="toggleBlock1()"><i class="fa-solid fa-location-dot"></i></span>
+                    
+                </div>
+                    <p>電話：(02)2612-3456<br>
+                        地址：台北市中正區忠孝東路123號<br>
+                        營業時間：11:00-20:00</p>
+                        <div class="hiddenBlock1">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7396044330976!2d121.5298755749631!3d25.042909537933472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a97c93ef06d7%3A0xa5345545bcf45297!2zMTAw5Y-w5YyX5biC5Lit5q2j5Y2A5b-g5a2d5p2x6Lev5LqM5q61MTIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1700982370987!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div id="part1" class="filter-item part1">
+                <img src="img/shop2.jpg" alt="松江南京店">
+                <div class="text">
+                    <div class="title">
+                    <h2>松江南京店</h2>
+                    <span onclick="toggleBlock2()"><i class="fa-solid fa-location-dot"></i></span>
+                </div>
+                <p>電話：(02)2612-3456<br>
+                    地址：台北市中山區長春路123號<br>
+                    營業時間：11:00-20:00</p>
+                <div class="hiddenBlock2">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.384011531438!2d121.52774647496342!3d25.054970437447523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9675b36f05f%3A0x39daa30d26cb6083!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDplbfmmKXot68xMjPomZ8!5e0!3m2!1szh-TW!2stw!4v1700984042390!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div id="part1" class="filter-item part1">
+                <img src="img/shop3.jpg" alt="台北車站店">
+                <div class="text">
+                    <div class="title">
+                    <h2>台北車站店</h2>
+                    <span onclick="toggleBlock3()"><i class="fa-solid fa-location-dot"></i></span>
+                </div>
+                <p>電話：(02)2612-3456<br>
+                    地址：台北市中山區市民大道123號<br>
+                    營業時間：11:00-20:00</p>
+                    <div class="hiddenBlock3">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.680861527312!2d121.53589107496322!3d25.044902337853163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abd8427b1e9d%3A0x904a33c610dad549!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDluILmsJHlpKfpgZPkuInmrrUxMjPomZ8!5e0!3m2!1szh-TW!2stw!4v1700984208118!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div id="part2" class="filter-item part2">
+                <img src="img/shop4.jpg" alt="台中一中店">
+                <div class="text">
+                    <div class="title">
+                    <h2>台中一中店</h2>
+                    <span onclick="toggleBlock4()"><i class="fa-solid fa-location-dot"></i></span>
+                </div>
+                <p>電話：(04)2612-3456<br>
+                    地址：台中市北區一中街123號<br>
+                    營業時間：11:00-20:00</p>
+                    <div class="hiddenBlock4">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.5968111567377!2d120.68308397493588!3d24.15079367328804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d688f6427b5%3A0xeb715f48f025178!2zNDA05Y-w5Lit5biC5YyX5Y2A5LiA5Lit6KGXMTIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1700984607146!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div id="part3" class="filter-item part3">
+                <img src="img/shop5.jpg" alt="台南孔廟店">
+                <div class="text">
+                    <div class="title">
+                    <h2>台南孔廟店</h2>
+                    <span onclick="toggleBlock5()"><i class="fa-solid fa-location-dot"></i></span>
+                </div>
+                <p>電話：(06)2612-3456<br>
+                    地址：台南市中西區南門路123號<br>
+                    營業時間：11:00-20:00</p>
+                    <div class="hiddenBlock5">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9992947558076!2d120.20193237490194!3d22.9870534176536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e767d8feff8bb%3A0x3b02a99a93bfc94b!2zNzAw5Y-w5Y2X5biC5Lit6KW_5Y2A5Y2X6ZaA6LevMTIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1700984655634!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div id="part3" class="filter-item part3">
+                <img src="img/shop6.jpg" alt="高雄夢時代店">
+                <div class="text">
+                    <div class="title">
+                    <h2>高雄夢時代店</h2>
+                    <span onclick="toggleBlock6()"><i class="fa-solid fa-location-dot"></i></span>
+                </div>
+                <p>電話：(07)2612-3456<br>
+                    地址：高雄市前鎮區中華五路123號<br>
+                    營業時間：11:00-20:00</p>
+                    <div class="hiddenBlock6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.360755464485!2d120.30343777489118!3d22.602999831856234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e037089809907%3A0x75b831a50d55242d!2zODA26auY6ZuE5biC5YmN6Y6u5Y2A5Lit6I-v5LqU6LevMTIz6Jmf!5e0!3m2!1szh-TW!2stw!4v1700984771408!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                </div>
+        </div>
+        </div>
+    
+        <div class="pic">
+            <img src="img/cup.png" alt="咖啡">
+        </div>
+    
+    
+    <div class="footer">
+        <div class="footer-box">
+        <div class="logo"><img src="img/logo.png" alt="logo"></div>
+        <div class="blank">
+            <nav>
+                <ul>
+                    <li><a href="about.html">品牌故事</a></li>
+                    <li><a href="news.html">活動訊息</a></li>
+                    <li><a href="products.html">特色咖啡</a></li>
+                    <li><a href="reservation.html">預定快取</a></li>
+                    <li><a href="store.html">門市查詢</a></li>
+                    <li><a href="contact.html">聯絡我們</a></li>
+                    <li><a href="#">人才招募</a></li>
+                    <li><a href="#">隱私權政策</a></li>
+                </ul>
+            </nav>
+            <p>營業時間<br>
+                11:00~20:00
+
+            </p>
+            <span>本網站為緯育TibaMe前端工程師班第88期學員專題作品，本平台僅供學習、展示之用。</span>
+
+        </div>
+    </div>
+</div>
+</div>
+    <div class="top"><i class="fa-regular fa-circle-up"></i></div>
+</div>
+    <script>
+     $(document).ready(function () {
+     $(".top").click(function (e) {
+    e.preventDefault();
+    $("html,body").animate({ scrollTop: 0 }, 500);
+    });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    var toggleNavButton = document.querySelector(".bar");
+    var navList = document.querySelector(".mobile-nav");
+
+    toggleNavButton.addEventListener("click", function () {
+    navList.style.display = navList.style.display === "none" ? "block" : "none";
+    });
+    });
+
+    function toggleBlock1(){
+        var block=document.querySelector('.hiddenBlock1');
+        if(block.style.display==="none"){
+            block.style.display ="block";
+        }else{
+            block.style.display="none";
+        }
+    }
+    function toggleBlock2(){
+        var block=document.querySelector('.hiddenBlock2');
+        if(block.style.display==="none"){
+            block.style.display ="block";
+        }else{
+            block.style.display="none";
+        }
+    }
+    function toggleBlock3(){
+        var block=document.querySelector('.hiddenBlock3');
+        if(block.style.display==="none"){
+            block.style.display ="block";
+        }else{
+            block.style.display="none";
+        }
+    }
+    function toggleBlock4(){
+        var block=document.querySelector('.hiddenBlock4');
+        if(block.style.display==="none"){
+            block.style.display ="block";
+        }else{
+            block.style.display="none";
+        }
+    }
+    function toggleBlock5(){
+        var block=document.querySelector('.hiddenBlock5');
+        if(block.style.display==="none"){
+            block.style.display ="block";
+        }else{
+            block.style.display="none";
+        }
+    }
+    function toggleBlock6(){
+        var block=document.querySelector('.hiddenBlock6');
+        if(block.style.display==="none"){
+            block.style.display ="block";
+        }else{
+            block.style.display="none";
+        }
+    }
+
+    var buttons = document.querySelectorAll('.select button');
+
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                // 移除所有按鈕的 'active' 類別
+                buttons.forEach(function (btn) {
+                    btn.classList.remove('active');
+                });
+
+                // 將 'active' 類別添加到被點擊的按鈕
+                button.classList.add('active');
+            });
+        });
+    
+        function filterItems(filter) {
+    var items = document.querySelectorAll('.filter-item');
+
+    // 隱藏所有物件
+    items.forEach(item => {
+        item.style.display = 'none';
+    });
+
+    // 根據選擇的篩選條件顯示相應的物件
+    if (filter === 'show-all') {
+        items.forEach(item => {
+            item.style.display = 'block';
+        });
+    } else if (filter === 'show-part1') {
+        // 顯示所有 part1 的物件
+        document.querySelectorAll('.part1').forEach(part1Item => {
+            part1Item.style.display = 'block';
+        });
+    } else if (filter === 'show-part2') {
+        // 顯示所有 part2 的物件
+        document.querySelectorAll('.part2').forEach(part2Item => {
+            part2Item.style.display = 'block';
+        });
+    } else if (filter === 'show-part3') {
+        // 顯示所有 part3 的物件
+        document.querySelectorAll('.part3').forEach(part3Item => {
+            part3Item.style.display = 'block';
+        });
+    }
+}
+
+
+</script>
+
+    
+</body>
+</html>

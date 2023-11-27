@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>預定快取</title>
+    <link rel="shortcut icon" href="img/icon.ico">
+    <meta name="description" content="個人專題作品">
+    <link rel="stylesheet" href="reservation.css">
+    <script src="https://kit.fontawesome.com/bf8e04378b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima&family=Jacques+Francois+Shadow&family=Mrs+Sheppards&family=Noto+Sans+TC&family=Noto+Serif+JP:wght@500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                <img src="img/logo2.png" alt="logo"></a>
+            </div>
+            <div class="mobile-main">
+                <div class="bar"><i class="fa-solid fa-bars"></i></div>
+                <div class="mobile-nav">
+                <div class="search">
+                    <form>
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="search">
+                        
+                    </form>
+
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="store.html">店鋪情報</a></li>
+                        <li><a href="products.html">品項介紹</a></li>
+                        <li><a href="reservation.html">預定快取</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </nav>
+            </div>
+        
+        </div>
+            
+            <div class="main">
+                
+                <div class="search">
+                    <form>
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input type="search">
+                        
+                    </form>
+
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="news.html">最新消息</a></li>
+                        <li><a href="about.html">關於我們</a></li>
+                        <li><a href="store.html">店鋪情報</a></li>
+                        <li><a href="products.html">品項介紹</a></li>
+                        <li><a href="reservation.html">預定快取</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="box">
+            <h1>預定快取</h1>
+            <div class="select">
+            <form>
+                <label for="selectStore">店家：</label>
+                <select id="selectStore">
+                    <option value="shop1">忠孝敦化店</option>
+                    <option value="shop2">松江南京店</option>
+                    <option value="shop3">台北車站店</option>
+                    <option value="shop4">台中一中店</option>
+                    <option value="shop5">台南孔廟店</option>
+                    <option value="shop6">高雄夢時代店</option>
+                </select>
+            </form>
+            <form>
+                <label for="datepicker">預計取餐日期：</label>
+                <input type="text" id="datepicker" placeholder="年/月/日">
+            </form>
+            <form>
+                <label for="selectTime">預計取餐時間：</label>
+                <select id="selectTime">
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                </select>
+            </form>
+        </div>
+        </div>
+    
+        <div class="order">
+            <div class="btn">
+                <button onclick="toggleContent('content1')" data-target="content1">咖啡</button>
+                <button onclick="toggleContent('content2')" data-target="content2">輕食</button>
+                <button onclick="toggleContent('content3')" data-target="content3">其他</button>
+            </div>
+            <div class="item"  id="content1">
+                <div class="card" data-product-id="1"  onclick="addToCart(products[0])">
+                        <p>極品美式</p>
+                        <p>$60</p>
+                </div>
+                <div class="card" data-product-id="2"  onclick="addToCart(products[1])">
+                        <p>招牌拿鐵</p>
+                        <p>$60</p>
+                </div>
+                <div class="card" data-product-id="3"  onclick="addToCart(products[2])">
+                        <p>義式濃縮</p>
+                        <p>$60</p>
+                </div>
+                <div class="card" data-product-id="4"  onclick="addToCart(products[3])">
+                        <p>黃金曼特寧</p>
+                        <p>$60</p>
+                </div>
+                <div class="card" data-product-id="5"  onclick="addToCart(products[4])">
+                        <p>卡布奇諾</p>
+                        <p>$60</p>
+                </div>
+                <div class="card" data-product-id="6"  onclick="addToCart(products[5])">
+                        <p>本店特調</p>
+                        <p>$60</p>
+                </div>
+            </div>
+            <div class="item"  id="content2">
+
+                <div class="card" data-product-id="7"  onclick="addToCart(products[6])">
+                        <p>火腿三明治</p>
+                        <p>$60</p>
+                </div>
+              
+                <div class="card" data-product-id="8"  onclick="addToCart(products[7])">
+                        <p>起司貝果</p>
+                        <p>$60</p>
+                </div>
+               
+                <div class="card" data-product-id="9"  onclick="addToCart(products[8])">
+                        <p>法式可頌</p>
+                        <p>$60</p>
+                </div>
+               
+                <div class="card" data-product-id="10"  onclick="addToCart(products[9])">
+                        <p>櫻桃黑森林</p>
+                        <p>$60</p>
+                </div>
+                
+
+                <div class="card" data-product-id="11"  onclick="addToCart(products[10])">
+                        <p>提拉米蘇</p>
+                        <p>$60</p>
+                </div>
+                
+                <div class="card" data-product-id="12"  onclick="addToCart(products[11])">
+                        <p>檸檬塔</p>
+                        <p>$60</p>
+                </div>
+                
+            </div>
+            <div class="item"  id="content3">
+                <div class="card" data-product-id="13"  onclick="addToCart(products[12])">
+                        <p>義式巧克力</p>
+                        <p>$60</p>
+                </div>
+                <div class="card" data-product-id="14"  onclick="addToCart(products[13])">
+                        <p>水果茶</p>
+                        <p>$60</p>
+                </div>
+  
+                <div class="card" data-product-id="15"  onclick="addToCart(products[14])">
+                        <p>抹茶拿鐵</p>
+                        <p>$60</p>
+                </div>
+
+                <div class="card" data-product-id="16"  onclick="addToCart(products[15])">
+                        <p>紅茶拿鐵</p>
+                        <p>$60</p>
+                </div>
+
+                <div class="card" data-product-id="17"  onclick="addToCart(products[16])">
+                        <p>蜜香紅茶</p>
+                        <p>$60</p>
+                </div>
+ 
+                <div class="card" data-product-id="18"  onclick="addToCart(products[17])">
+                        <p>深蒸綠茶</p>
+                        <p>$60</p>
+                </div>
+ 
+            </div>
+        </div>
+
+        <div id="cart-items">
+            <h2>購物車</h2>
+            <table id="cart">
+                <thead>
+                    <tr>
+                        <th>商品</th>
+                        <th>價格</th>
+                        <th>數量</th>
+                        <th>小計</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-body"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">總計</td>
+                        <td id="total">0</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer-box">
+        <div class="logo"><img src="img/logo.png" alt="logo"></div>
+        <div class="blank">
+            <nav>
+                <ul>
+                    <li><a href="about.html">品牌故事</a></li>
+                    <li><a href="news.html">活動訊息</a></li>
+                    <li><a href="products.html">特色咖啡</a></li>
+                    <li><a href="reservation.html">預定快取</a></li>
+                    <li><a href="store.html">門市查詢</a></li>
+                    <li><a href="contact.html">聯絡我們</a></li>
+                    <li><a href="#">人才招募</a></li>
+                    <li><a href="#">隱私權政策</a></li>
+                </ul>
+            </nav>
+            <p>營業時間<br>
+                11:00~20:00
+
+            </p>
+            <span>本網站為緯育TibaMe前端工程師班第88期學員專題作品，本平台僅供學習、展示之用。</span>
+
+        </div>
+    </div>
+</div>
+</div>
+    <div class="top"><i class="fa-regular fa-circle-up"></i></div>
+</div>
+
+    <script>
+     $(document).ready(function () {
+     $(".top").click(function (e) {
+    e.preventDefault();
+    $("html,body").animate({ scrollTop: 0 }, 500);
+    });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    var toggleNavButton = document.querySelector(".bar");
+    var navList = document.querySelector(".mobile-nav");
+
+    toggleNavButton.addEventListener("click", function () {
+    navList.style.display = navList.style.display === "none" ? "block" : "none";
+    });
+    });
+
+    $(document).ready(function () {
+            // 初始化日期選擇器
+            $("#datepicker").datepicker();
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+    // 初始顯示全店活動內容
+    toggleContent('content1');
+});
+
+
+    function toggleContent(contentId) {
+    // 隐藏所有内容
+    var contents = document.querySelectorAll('.item');
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = 'none';
+    }
+
+    // 移除所有按钮的激活状态
+    var buttons = document.querySelectorAll('.btn button');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].classList.remove('active');
+    }
+
+    // 显示点击的内容
+    var contentToShow = document.getElementById(contentId);
+    if (contentToShow) {
+        contentToShow.style.display = 'inline-flex';
+    }
+
+    // 添加激活状态到被點擊的按鈕
+    var clickedButton = document.querySelector('.btn button[data-target="' + contentId + '"]');
+    if (clickedButton) {
+        clickedButton.classList.add('active');
+    }
+    }
+    
+
+    document.addEventListener("DOMContentLoaded", function () {
+        function updateQuantity(id, change) {
+            const existingItem = cart.find(item => item.id === id);
+
+            if (existingItem) {
+                existingItem.quantity += parseInt(change, 10) || 0;
+                existingItem.quantity = Math.max(1, existingItem.quantity);
+            }
+
+            renderCart();
+        }
+
+        function removeFromCart(id) {
+        cart = cart.filter(item => item.id !== id);
+        renderCart();
+    }
+
+
+        // 商品數據
+        const products = [
+            { id: 1, name: '極品美式', price: 60 },
+            { id: 2, name: '招牌拿鐵', price: 60 },
+            { id: 3, name: '義式濃縮', price: 60 },
+            { id: 4, name: '黃金曼特寧', price: 60 },
+            { id: 5, name: '卡布奇諾', price: 60 },
+            { id: 6, name: '本店特調', price: 60 },
+            { id: 7, name: '火腿三明治', price: 60 },
+            { id: 8, name: '起司貝果', price: 60 },
+            { id: 9, name: '法式可頌', price: 60 },
+            { id: 10, name: '櫻桃黑森林', price: 60 },
+            { id: 11, name: '提拉米蘇', price: 60 },
+            { id: 12, name: '檸檬塔', price: 60 },
+            { id: 13, name: '義式巧克力', price: 60 },
+            { id: 14, name: '水果茶', price: 60 },
+            { id: 15, name: '抹茶拿鐵', price: 60 },
+            { id: 16, name: '紅茶拿鐵', price: 60 },
+            { id: 17, name: '蜜香紅茶', price: 60 },
+            { id: 18, name: '深蒸綠茶', price: 60 },
+            // ... 其他商品
+        ];
+
+        // 購物車數據
+        let cart = [];
+
+        // 將商品添加到購物車
+        function addToCart(product) {
+            const existingItem = cart.find(item => item.id === product.id);
+
+            if (existingItem) {
+                // 商品已存在，增加數量
+                existingItem.quantity++;
+            } else {
+                // 商品不存在，新增一條數據
+                cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1 });
+            }
+
+            // 更新購物車頁面
+            renderCart();
+        }
+
+        // 更新購物車頁面的函數
+        function renderCart() {
+            const cartBody = document.getElementById('cart-body');
+            const totalElement = document.getElementById('total');
+
+            // 清空購物車
+            cartBody.innerHTML = '';
+
+            // 計算總價
+            let total = 0;
+
+            // 遍歷購物車內的每一項商品
+            cart.forEach(item => {
+                const product = products.find(p => p.id === item.id);
+
+                // 計算總價
+                const subtotal = item.quantity * product.price;
+                total += subtotal;
+
+                // 創建一個新的表格行
+                const row = document.createElement('tr');
+
+                // 將商品信息添加到表格行中
+                row.innerHTML = `
+                    <td>${product.name}</td>
+                    <td>${product.price}</td>
+                    <td>
+                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                        <input type="text" class="quantity-input" value="${item.quantity}" oninput="updateQuantity(${item.id}, this.value)">
+                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+                    </td>
+                    <td>${subtotal}</td>
+                    <td>
+                        <button class="remove-btn" onclick="removeFromCart(${item.id})">移除</button>
+                    </td>
+                `;
+
+                // 添加表格行到購物車
+                cartBody.appendChild(row);
+            });
+
+            // 更新總價
+            totalElement.textContent = total;
+        }
+
+        
+
+        // 監聽 card 的點擊事件
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', function () {
+                // 獲取被點擊 card 的商品 ID 和商品名稱
+                const productId = parseInt(card.getAttribute('data-product-id'));
+                const productName = card.querySelector('p:first-child').textContent;
+
+                // 在商品數據中找到對應的商品
+                const selectedProduct = { id: productId, name: productName, price: 60 }; // 在這裡使用合適的價格
+
+                // 將商品添加到購物車
+                addToCart(selectedProduct);
+            });
+        });
+    });
+
+    </script>
+
+
+
+      
+
+
+    
+</body>
+</html>
