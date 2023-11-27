@@ -302,7 +302,21 @@ table {
     background-color: #f9f9f9;
 }
 
-
+#cancel-btn,#checkout-btn{
+	margin-top: 30px;
+	padding: 10px 20px;
+	margin-right: 20px;
+	border-radius: 20px;
+	border: none;
+	box-shadow: 3px 3px 3px #aaa;
+	transition: transform 0.3s ease;
+}
+#checkout-btn{
+	background-color: #CEAF92;
+}
+#cancel-btn:hover,#checkout-btn:hover{
+	transform: translateY(5px);
+}
 
 
 

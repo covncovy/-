@@ -122,91 +122,91 @@
                 <button onclick="toggleContent('content3')" data-target="content3">其他</button>
             </div>
             <div class="item"  id="content1">
-                <div class="card" data-product-id="1"  onclick="addToCart(products[0])">
+                <div class="card" data-product-id="1">
                         <p>極品美式</p>
                         <p>$60</p>
                 </div>
-                <div class="card" data-product-id="2"  onclick="addToCart(products[1])">
+                <div class="card" data-product-id="2">
                         <p>招牌拿鐵</p>
                         <p>$60</p>
                 </div>
-                <div class="card" data-product-id="3"  onclick="addToCart(products[2])">
+                <div class="card" data-product-id="3">
                         <p>義式濃縮</p>
                         <p>$60</p>
                 </div>
-                <div class="card" data-product-id="4"  onclick="addToCart(products[3])">
+                <div class="card" data-product-id="4">
                         <p>黃金曼特寧</p>
                         <p>$60</p>
                 </div>
-                <div class="card" data-product-id="5"  onclick="addToCart(products[4])">
+                <div class="card" data-product-id="5">
                         <p>卡布奇諾</p>
                         <p>$60</p>
                 </div>
-                <div class="card" data-product-id="6"  onclick="addToCart(products[5])">
+                <div class="card" data-product-id="6">
                         <p>本店特調</p>
                         <p>$60</p>
                 </div>
             </div>
             <div class="item"  id="content2">
 
-                <div class="card" data-product-id="7"  onclick="addToCart(products[6])">
+                <div class="card" data-product-id="7">
                         <p>火腿三明治</p>
                         <p>$60</p>
                 </div>
               
-                <div class="card" data-product-id="8"  onclick="addToCart(products[7])">
+                <div class="card" data-product-id="8">
                         <p>起司貝果</p>
                         <p>$60</p>
                 </div>
                
-                <div class="card" data-product-id="9"  onclick="addToCart(products[8])">
+                <div class="card" data-product-id="9">
                         <p>法式可頌</p>
                         <p>$60</p>
                 </div>
                
-                <div class="card" data-product-id="10"  onclick="addToCart(products[9])">
+                <div class="card" data-product-id="10">
                         <p>櫻桃黑森林</p>
                         <p>$60</p>
                 </div>
                 
 
-                <div class="card" data-product-id="11"  onclick="addToCart(products[10])">
+                <div class="card" data-product-id="11">
                         <p>提拉米蘇</p>
                         <p>$60</p>
                 </div>
                 
-                <div class="card" data-product-id="12"  onclick="addToCart(products[11])">
+                <div class="card" data-product-id="12">
                         <p>檸檬塔</p>
                         <p>$60</p>
                 </div>
                 
             </div>
             <div class="item"  id="content3">
-                <div class="card" data-product-id="13"  onclick="addToCart(products[12])">
+                <div class="card" data-product-id="13">
                         <p>義式巧克力</p>
                         <p>$60</p>
                 </div>
-                <div class="card" data-product-id="14"  onclick="addToCart(products[13])">
+                <div class="card" data-product-id="14">
                         <p>水果茶</p>
                         <p>$60</p>
                 </div>
   
-                <div class="card" data-product-id="15"  onclick="addToCart(products[14])">
+                <div class="card" data-product-id="15">
                         <p>抹茶拿鐵</p>
                         <p>$60</p>
                 </div>
 
-                <div class="card" data-product-id="16"  onclick="addToCart(products[15])">
+                <div class="card" data-product-id="16">
                         <p>紅茶拿鐵</p>
                         <p>$60</p>
                 </div>
 
-                <div class="card" data-product-id="17"  onclick="addToCart(products[16])">
+                <div class="card" data-product-id="17">
                         <p>蜜香紅茶</p>
                         <p>$60</p>
                 </div>
  
-                <div class="card" data-product-id="18"  onclick="addToCart(products[17])">
+                <div class="card" data-product-id="18">
                         <p>深蒸綠茶</p>
                         <p>$60</p>
                 </div>
@@ -235,6 +235,9 @@
                     </tr>
                 </tfoot>
             </table>
+           
+        <button id="cancel-btn">取消</button>
+        <button id="checkout-btn">結帳</button>
         </div>
     </div>
     
@@ -322,130 +325,153 @@
     }
     
 
-    document.addEventListener("DOMContentLoaded", function () {
-        function updateQuantity(id, change) {
-            const existingItem = cart.find(item => item.id === id);
+    
 
-            if (existingItem) {
-                existingItem.quantity += parseInt(change, 10) || 0;
-                existingItem.quantity = Math.max(1, existingItem.quantity);
-            }
+ // 商品數據
+const products = [
+    { id: 1, name: '極品美式', price: 60 },
+    { id: 2, name: '招牌拿鐵', price: 60 },
+    { id: 3, name: '義式濃縮', price: 60 },
+    { id: 4, name: '黃金曼特寧', price: 60 },
+    { id: 5, name: '卡布奇諾', price: 60 },
+    { id: 6, name: '本店特調', price: 60 },
+    { id: 7, name: '火腿三明治', price: 60 },
+    { id: 8, name: '起司貝果', price: 60 },
+    { id: 9, name: '法式可頌', price: 60 },
+    { id: 10, name: '櫻桃黑森林', price: 60 },
+    { id: 11, name: '提拉米蘇', price: 60 },
+    { id: 12, name: '檸檬塔', price: 60 },
+    { id: 13, name: '義式巧克力', price: 60 },
+    { id: 14, name: '水果茶', price: 60 },
+    { id: 15, name: '抹茶拿鐵', price: 60 },
+    { id: 16, name: '紅茶拿鐵', price: 60 },
+    { id: 17, name: '蜜香紅茶', price: 60 },
+    { id: 18, name: '深蒸綠茶', price: 60 },
+];
 
-            renderCart();
-        }
+// 購物車數據
+let cart = [];
 
-        function removeFromCart(id) {
-        cart = cart.filter(item => item.id !== id);
-        renderCart();
+// 將商品添加到購物車
+function addToCart(product) {
+    const existingItemIndex = cart.findIndex(item => item.id === product.id);
+
+    if (existingItemIndex !== -1) {
+        cart[existingItemIndex].quantity++;
+    } else {
+        cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1 });
     }
 
+    // 更新購物車頁面
+    renderCart();
+}
 
-        // 商品數據
-        const products = [
-            { id: 1, name: '極品美式', price: 60 },
-            { id: 2, name: '招牌拿鐵', price: 60 },
-            { id: 3, name: '義式濃縮', price: 60 },
-            { id: 4, name: '黃金曼特寧', price: 60 },
-            { id: 5, name: '卡布奇諾', price: 60 },
-            { id: 6, name: '本店特調', price: 60 },
-            { id: 7, name: '火腿三明治', price: 60 },
-            { id: 8, name: '起司貝果', price: 60 },
-            { id: 9, name: '法式可頌', price: 60 },
-            { id: 10, name: '櫻桃黑森林', price: 60 },
-            { id: 11, name: '提拉米蘇', price: 60 },
-            { id: 12, name: '檸檬塔', price: 60 },
-            { id: 13, name: '義式巧克力', price: 60 },
-            { id: 14, name: '水果茶', price: 60 },
-            { id: 15, name: '抹茶拿鐵', price: 60 },
-            { id: 16, name: '紅茶拿鐵', price: 60 },
-            { id: 17, name: '蜜香紅茶', price: 60 },
-            { id: 18, name: '深蒸綠茶', price: 60 },
-            // ... 其他商品
-        ];
+// 更新购物车页面的函数
+function renderCart() {
+    const cartBody = document.getElementById('cart-body');
+    const totalElement = document.getElementById('total');
 
-        // 購物車數據
-        let cart = [];
+    // 清空购物车
+    cart = cart.filter(item => item.quantity > 0);
+    while (cartBody.firstChild) {
+        cartBody.removeChild(cartBody.firstChild);
+    }
+
+    // 计算总价
+    let total = 0;
+
+    // 遍历购物车内的每一项商品
+    cart.forEach(item => {
+        const product = products.find(p => p.id === item.id);
+
+        // 计算总价
+        const subtotal = item.quantity * product.price;
+        total += subtotal;
+
+        // 创建一个新的表格行
+        const row = document.createElement('tr');
+
+        // 将商品信息添加到表格行中
+        row.innerHTML = `
+            <td>${product.name}</td>
+            <td>${product.price}</td>
+            <td>
+                <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                <input type="text" class="quantity-input" value="${item.quantity}" oninput="updateQuantity(${item.id}, this.value)">
+                <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+            </td>
+            <td>${subtotal}</td>
+            <td>
+                <button class="remove-btn" onclick="removeFromCart(${item.id})">移除</button>
+            </td>
+        `;
+
+        // 添加表格行到购物车
+        cartBody.appendChild(row);
+    });
+
+    // 更新总价
+    totalElement.textContent = total;
+}
+
+// 監聽 card 的點擊事件
+const cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+    card.addEventListener('click', function () {
+        // 獲取被點擊 card 的商品 ID 和商品名稱
+        const productId = parseInt(card.getAttribute('data-product-id'));
+        const productName = card.querySelector('p:first-child').textContent;
+
+        // 在商品數據中找到對應的商品
+        const selectedProduct = { id: productId, name: productName, price: 60 }; // 在這裡使用合適的價格
 
         // 將商品添加到購物車
-        function addToCart(product) {
-            const existingItem = cart.find(item => item.id === product.id);
-
-            if (existingItem) {
-                // 商品已存在，增加數量
-                existingItem.quantity++;
-            } else {
-                // 商品不存在，新增一條數據
-                cart.push({ id: product.id, name: product.name, price: product.price, quantity: 1 });
-            }
-
-            // 更新購物車頁面
-            renderCart();
-        }
-
-        // 更新購物車頁面的函數
-        function renderCart() {
-            const cartBody = document.getElementById('cart-body');
-            const totalElement = document.getElementById('total');
-
-            // 清空購物車
-            cartBody.innerHTML = '';
-
-            // 計算總價
-            let total = 0;
-
-            // 遍歷購物車內的每一項商品
-            cart.forEach(item => {
-                const product = products.find(p => p.id === item.id);
-
-                // 計算總價
-                const subtotal = item.quantity * product.price;
-                total += subtotal;
-
-                // 創建一個新的表格行
-                const row = document.createElement('tr');
-
-                // 將商品信息添加到表格行中
-                row.innerHTML = `
-                    <td>${product.name}</td>
-                    <td>${product.price}</td>
-                    <td>
-                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
-                        <input type="text" class="quantity-input" value="${item.quantity}" oninput="updateQuantity(${item.id}, this.value)">
-                        <button class="quantity-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
-                    </td>
-                    <td>${subtotal}</td>
-                    <td>
-                        <button class="remove-btn" onclick="removeFromCart(${item.id})">移除</button>
-                    </td>
-                `;
-
-                // 添加表格行到購物車
-                cartBody.appendChild(row);
-            });
-
-            // 更新總價
-            totalElement.textContent = total;
-        }
-
-        
-
-        // 監聽 card 的點擊事件
-        const cards = document.querySelectorAll('.card');
-
-        cards.forEach(card => {
-            card.addEventListener('click', function () {
-                // 獲取被點擊 card 的商品 ID 和商品名稱
-                const productId = parseInt(card.getAttribute('data-product-id'));
-                const productName = card.querySelector('p:first-child').textContent;
-
-                // 在商品數據中找到對應的商品
-                const selectedProduct = { id: productId, name: productName, price: 60 }; // 在這裡使用合適的價格
-
-                // 將商品添加到購物車
-                addToCart(selectedProduct);
-            });
-        });
+        addToCart(selectedProduct);
     });
+});
+
+function updateQuantity(id, change) {
+    const existingItem = cart.find(item => item.id === id);
+
+    if (existingItem) {
+        existingItem.quantity += parseInt(change, 10) || 0;
+        existingItem.quantity = Math.max(1, existingItem.quantity);
+    }
+
+    renderCart();
+}
+
+function removeFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    renderCart();
+}
+
+// DOMContentLoaded 事件的回調函數
+document.addEventListener("DOMContentLoaded", function () {
+    // 在這裡可以進行一些與 DOM 有關的初始化操作
+});
+
+ // 新增取消和結帳按鈕
+ const cancelBtn = document.getElementById('cancel-btn');
+    const checkoutBtn = document.getElementById('checkout-btn');
+
+    // 綁定取消按鈕的點擊事件
+    cancelBtn.addEventListener('click', function () {
+        // 清空購物車
+        cart = [];
+        // 更新購物車頁面
+        renderCart();
+    });
+
+    // 綁定結帳按鈕的點擊事件
+    checkoutBtn.addEventListener('click', function () {
+        // 在這裡可以執行結帳相關的邏輯，比如彈出支付窗口、向後端發送訂單等
+        // 這裡只是簡單地在控制台輸出一條消息
+        console.log('結帳成功！');
+    });
+
+
 
     </script>
 
