@@ -97,9 +97,9 @@ html,body{
 	text-decoration: none;
 	color:#333;
 	font-weight: bold;
-	font-size: 16px;
-	padding: 10px 40px;
-	/* border:1px solid; */
+	letter-spacing: 1.5px;
+	font-size: 18px;
+	padding: 10px 30px;
 	position: relative;
 }
 .main li a::after{
@@ -174,7 +174,7 @@ html,body{
 	margin-right:30px ;
 	background-color: white;
 	border-radius: 30px;
-	border-color: #aaa;
+	border:1px solid #aaa;
 }
 .btn a{
 	text-decoration: none;
@@ -215,10 +215,10 @@ html,body{
 
 }
 .box h2{
-	-webkit-text-stroke:2px #333;
-	color:white;
+	text-align: center;
 	font-size: 50px;
 	letter-spacing: 2px;
+	font-family: 'Noto Serif JP', sans-serif;
 }
 .card p{
 	font-size: 25px;
@@ -230,23 +230,21 @@ html,body{
 	transition: 0.5s ease 0s;
 }
 
-.reserve button a{
+.reserve a{
 	text-decoration: none;
 	color:white;
 	font-size: 25px;
-	padding: 35px 120px;
+	padding: 35px;
 	display: block;
-}
-.reserve button{
 	background-color: #947C71;
 	border:none;
 	border-radius: 15px;
 	transition: transform 0.3s ease;
 	box-shadow: 3px 3px 5px #555;
-	margin-left: 38%;
-	margin-bottom: 100px;
+	margin:0 38% 100px 38%;
+	text-align: center;
 }
-.reserve button:hover{
+.reserve a:hover{
 	background-color: #6E3521;
 	transform: translateY(5px);
 }
@@ -304,7 +302,7 @@ html,body{
 	font-size: 15px;
 }
 .top{
-	font-size: 70px;
+	font-size: 50px;
 	cursor: pointer;
 	position: fixed;
 	bottom: 10px;
@@ -314,7 +312,7 @@ html,body{
 
 @media(max-width:768px){
 	.header .logo{
-		width: 200px;
+		width: 10em;
 		margin-left: 20px;
 	}
 	.main{
@@ -323,6 +321,8 @@ html,body{
 	.bar{
 		display: block;
 		cursor: pointer;
+		top:40%;
+		
 	}
 	
 
@@ -335,7 +335,7 @@ html,body{
 		align-items: center;
 		position: absolute;
 		right: 0;
-		top:115px;
+		top:100px;
 		z-index: 1;
 		padding-top: 50px;
 
@@ -348,30 +348,77 @@ html,body{
 		color:white;
 	}
 	.mobile-nav .search{
-		padding-right: 50px;
+		margin-right:80px;
 
 	}
 	.mobile-nav li a:hover{
 		background-color: #B8A095;
 	}
 
+	.banner h1{
+		top:45%;
+		left: 40%;
+		font-size: 20px;
+		letter-spacing: 10px;
+		text-shadow: 3px 3px 0 #333;
+	}
+	.btn{
+		margin: 0;
+		display: flex;
+		padding: 20px;
+	}
+	.btn a{
+		font-size: 15px;
+		padding: 0;
+		width: 100px;
+	}
+	.btn button{
+		padding: 0;
+		justify-content: center;
+	}
 
-
-
-
-
-
-
+	.products{
+		padding: 0;
+	}
+	.item{
+		padding: 0;
+	}
+	.card img{
+		width: 100%;
+		box-shadow: 10px 10px 0 #aaa;
+	}
+	.card{
+		width: 40%;
+		margin:30px 10px 10px 10px;
+	}
+	.card p{
+		font-size: 18px;
+	}
+	.box{
+		margin-bottom: 50px;
+	}
+	.box h2{
+		font-size: 40px;
+	}
+	.reserve{
+		white-space: nowrap;
+		margin-right: 100px;
+	}
+	.reserve a{
+		padding: 20px;
+		width: 200px;
+		margin: 0 0 50px 30%;
+	}
 
 
 	.blank{
-		/* border: 1px solid; */
-		margin: -30px;
-		padding-right:250px ;
+		margin: -3em;
+		
 	}
 	.blank ul{
 		display: flex;
-		width: 220px;
+		width: 15em;
+		margin-left:1em ;
 		
 	}
 	.blank li{
@@ -379,9 +426,10 @@ html,body{
 		margin-top: -10px;
 		margin-bottom:30px ;
 		margin-right: 30px;
+		
 	}
 	.blank ul a{
-		font-size: 15px;
+		font-size:0.7em;
 	}
 	.footer-box{
 		border: none;
@@ -396,25 +444,28 @@ html,body{
 	.footer .logo{
 		position: absolute;
 		top:-45px;
-		right: 80px;
+		right: 4em;
 		
 	}
 	.footer .logo img{
-		width: 170px;
+		width: 8em;
 
 	}
 	.blank p{
-		font-size: 14px;
+		font-size: 0.7em;
 		position: absolute;
-		right:60px;
-		top:170px;
+		right:4em;
+		top:140px;
 	}
 	.blank span{
-		font-size: 12px;
+		font-size: 0.7em;
 		position: absolute;
 		text-align: center;
 		padding: 0 40px;
-		top:240px;
+		top:210px;
 		
+	}
+	.top{
+		margin-right: 20%;
 	}
 }

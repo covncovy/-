@@ -94,9 +94,9 @@ table {
 	text-decoration: none;
 	color:#333;
 	font-weight: bold;
-	font-size: 16px;
-	padding: 10px 40px;
-	/* border:1px solid; */
+	letter-spacing: 1.5px;
+	font-size: 18px;
+	padding: 10px 30px;
 	position: relative;
 }
 .main li a::after{
@@ -188,9 +188,11 @@ table {
 	letter-spacing: 10px;
 }
 .welcome p{
-	font-family: 'Agdasima', sans-serif;
-	letter-spacing: 7px;
-	font-size: 25px;
+	font-family: 'Noto Serif JP', sans-serif;;
+	letter-spacing: 2px;
+	font-size: 15px;
+	padding:0 100px;
+	line-height: 1.5;
 }
 .offer h3{
 	font-family: 'Jacques Francois Shadow', serif;
@@ -212,10 +214,12 @@ table {
 	justify-content: center;
 	padding-bottom: 400px;
 	
+	
 }
 .box img{
 	width: 100%;
 	border-radius: 50%;
+	transition: 0.5s ease 0s;
 	
 	
 }
@@ -263,27 +267,27 @@ table {
 }
 .box:hover img{
 	transform: scale(1.1);
-	transition: 0.5s ease 0s;
+	
 }
 .reserve{
 	text-align: center;
 	margin-bottom: 100px;
 }
-.reserve button a{
+.reserve a{
 	text-decoration: none;
 	color:white;
 	font-size: 25px;
-	padding: 35px 120px;
+	padding: 35px;
+	width: 300px;
+	margin: auto;
 	display: block;
-}
-.reserve button{
 	background-color: #947C71;
 	border:none;
 	border-radius: 15px;
 	transition: transform 0.3s ease;
 	box-shadow: 3px 3px 5px #555;
 }
-.reserve button:hover{
+.reserve a:hover{
 	background-color: #6E3521;
 	transform: translateY(5px);
 
@@ -320,14 +324,12 @@ table {
 	letter-spacing: 3px;
 	line-height: 2;
 }
-.article button{
-	margin: 50px 30px 30px 300px;
+.article a{
+	margin: 50px 30px 30px 340px;
 	transition: transform 0.3s ease;
 	border-radius: 30px;
 	background-color: #6D4D38;
-	border-color: #333;
-}
-.article button a{
+	border:2px solid #333;
 	padding:15px 50px;
 	display: block;
 	color: white;
@@ -335,7 +337,7 @@ table {
 	font-size: 18px;
 
 }
-.article button:hover{
+.article a:hover{
 	background-color: #947C71;
 	transform: translateY(5px);
 	
@@ -442,7 +444,7 @@ table {
 	font-size: 15px;
 }
 .top{
-	font-size: 70px;
+	font-size: 50px;
 	cursor: pointer;
 	position: fixed;
 	bottom: 10px;
@@ -487,7 +489,7 @@ table {
 		color:white;
 	}
 	.mobile-nav .search{
-		align-items: center;
+		margin-right:80px;
 
 	}
 	.mobile-nav li a:hover{
@@ -525,9 +527,9 @@ table {
 		padding: 0 20px;
 		
 	}
-	.reserve button a{
+	.reserve a{
 		font-size: 1em;
-		padding: 2em 5em;
+		padding: 1.5em 0.5em;
 	}
 
 	.story{
@@ -565,17 +567,13 @@ table {
 		padding: 0;
 		margin: 0 -30px;
 	}
-	.article button {
+	.article a {
 		color:white;
 		position: absolute;
 		top:120px;
 		right:0;
 		background: none;
 		border-color: white;
-		
-	}
-	.article button a{
-		color:white;
 		font-size: 1em;
 		padding: 10px;
 	}
