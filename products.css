@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	overflow: hidden;
+	
 }
 ol, ul {
 	list-style: none;
@@ -55,6 +55,7 @@ html,body{
 	margin: auto;
 	font-family: 'Noto Sans TC', sans-serif;
 	scroll-behavior: smooth;
+	overflow: hidden;
 }
 
 .header{
