@@ -178,13 +178,26 @@ table {
 	padding: 0 170px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	margin-bottom: 300px;
 }
 .card{
 	width: 29%;
+	
 	/* margin-bottom: 100px; */
 }
+.card:nth-child(1){
+	margin-right: 50px;
+}
+.card:nth-child(2){
+	margin-right: 50px;
+}
+.card:nth-child(4){
+	margin-right: 50px;
+}
+.card:nth-child(5){
+	margin-right: 50px;
+}
+
 .card img{
 	width: 100%;
 }
@@ -218,6 +231,7 @@ table {
 	letter-spacing: 2px;
 	font-size: 17px;
 	margin-bottom: 30px;
+	line-height: 1.5;
 }
 
 
